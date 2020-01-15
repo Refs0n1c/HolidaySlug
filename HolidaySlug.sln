@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaySlug", "HolidaySlug\HolidaySlug.csproj", "{D996FE88-5ADE-469F-B14F-AE7C44CC5F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaySlug.Services", "HolidaySlug.Services\HolidaySlug.Services.csproj", "{BD5D4B3C-495D-440B-AAB1-41BD793579AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidaySlug.Data", "HolidaySlug.Data\HolidaySlug.Data.csproj", "{535E37E7-8F04-43B2-AE96-9063F3DB62B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D996FE88-5ADE-469F-B14F-AE7C44CC5F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D996FE88-5ADE-469F-B14F-AE7C44CC5F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D996FE88-5ADE-469F-B14F-AE7C44CC5F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D996FE88-5ADE-469F-B14F-AE7C44CC5F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5D4B3C-495D-440B-AAB1-41BD793579AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5D4B3C-495D-440B-AAB1-41BD793579AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5D4B3C-495D-440B-AAB1-41BD793579AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5D4B3C-495D-440B-AAB1-41BD793579AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535E37E7-8F04-43B2-AE96-9063F3DB62B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535E37E7-8F04-43B2-AE96-9063F3DB62B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535E37E7-8F04-43B2-AE96-9063F3DB62B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535E37E7-8F04-43B2-AE96-9063F3DB62B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
