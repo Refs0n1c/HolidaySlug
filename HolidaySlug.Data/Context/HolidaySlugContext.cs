@@ -26,14 +26,11 @@ namespace HolidaySlug.Data.Context
 
             
 
-
-
-
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder builder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            builder.UseSqlServer(@"Server=localhost; Database=HolidaySlugDB; User=sa; Password=boopboop2306@@;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=HolidaySlugDev;User=SA; Password=change_this_password");
         }
     }
 }

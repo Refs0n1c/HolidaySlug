@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HolidaySlug.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -41,11 +41,9 @@ namespace HolidaySlug.Data.Migrations
                     From = table.Column<DateTime>(nullable: false),
                     To = table.Column<DateTime>(nullable: false),
                     DaysUsed = table.Column<int>(nullable: false),
-                    UserID = table.Column<int>(nullable: false),
-                    UserID1 = table.Column<Guid>(nullable: true),
+                    UserID = table.Column<Guid>(nullable: true),
                     Approved = table.Column<bool>(nullable: false),
-                    ApprovedByUserID = table.Column<int>(nullable: false),
-                    ApprovedByUserID1 = table.Column<Guid>(nullable: true)
+                    ApprovedByUserID = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,9 +61,7 @@ namespace HolidaySlug.Data.Migrations
                 columns: table => new
                 {
                     ID = table.Column<Guid>(nullable: false),
-                    UserID = table.Column<int>(nullable: false),
-                    ManagerID1 = table.Column<Guid>(nullable: true),
-                    ManagerID = table.Column<int>(nullable: false)
+                    ManagerID = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -95,9 +91,9 @@ namespace HolidaySlug.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Holidays_ApprovedByUserID1",
+                name: "IX_Holidays_ApprovedByUserID",
                 table: "Holidays",
-                column: "ApprovedByUserID1");
+                column: "ApprovedByUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Holidays_HolidayTypeID",
@@ -105,9 +101,9 @@ namespace HolidaySlug.Data.Migrations
                 column: "HolidayTypeID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Holidays_UserID1",
+                name: "IX_Holidays_UserID",
                 table: "Holidays",
-                column: "UserID1");
+                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_UserTeamID",
@@ -115,30 +111,30 @@ namespace HolidaySlug.Data.Migrations
                 column: "UserTeamID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserTeams_ManagerID1",
+                name: "IX_UserTeams_ManagerID",
                 table: "UserTeams",
-                column: "ManagerID1");
+                column: "ManagerID");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Holidays_Users_ApprovedByUserID1",
+                name: "FK_Holidays_Users_ApprovedByUserID",
                 table: "Holidays",
-                column: "ApprovedByUserID1",
+                column: "ApprovedByUserID",
                 principalTable: "Users",
                 principalColumn: "ID",
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Holidays_Users_UserID1",
+                name: "FK_Holidays_Users_UserID",
                 table: "Holidays",
-                column: "UserID1",
+                column: "UserID",
                 principalTable: "Users",
                 principalColumn: "ID",
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_UserTeams_Users_ManagerID1",
+                name: "FK_UserTeams_Users_ManagerID",
                 table: "UserTeams",
-                column: "ManagerID1",
+                column: "ManagerID",
                 principalTable: "Users",
                 principalColumn: "ID",
                 onDelete: ReferentialAction.Restrict);
@@ -147,7 +143,7 @@ namespace HolidaySlug.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_UserTeams_Users_ManagerID1",
+                name: "FK_UserTeams_Users_ManagerID",
                 table: "UserTeams");
 
             migrationBuilder.DropTable(
