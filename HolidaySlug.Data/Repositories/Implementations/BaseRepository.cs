@@ -7,8 +7,8 @@ namespace HolidaySlug.Data.Repositories.Implementations
 {
     public class BaseRepository<T> : IRepository<T> where T : class
     {
-        private HolidaySlugContext _context = null;
-        private DbSet<T> _table = null;
+        protected HolidaySlugContext _context = null;
+        protected DbSet<T> _table = null;
 
         public BaseRepository(HolidaySlugContext context)
         {

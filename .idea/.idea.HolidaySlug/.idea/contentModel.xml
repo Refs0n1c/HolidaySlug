@@ -37,8 +37,10 @@
         <e p="Repositories" t="Include">
           <e p="Implementations" t="Include">
             <e p="BaseRepository.cs" t="Include" />
+            <e p="HolidayRepository.cs" t="Include" />
           </e>
           <e p="Interfaces" t="Include">
+            <e p="IHolidayRepository.cs" t="Include" />
             <e p="IRepository.cs" t="Include" />
           </e>
         </e>
