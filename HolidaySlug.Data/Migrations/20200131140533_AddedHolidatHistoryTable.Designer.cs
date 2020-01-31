@@ -4,14 +4,16 @@ using HolidaySlug.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HolidaySlug.Data.Migrations
 {
     [DbContext(typeof(HolidaySlugContext))]
-    partial class HolidaySlugContextModelSnapshot : ModelSnapshot
+    [Migration("20200131140533_AddedHolidatHistoryTable")]
+    partial class AddedHolidatHistoryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,13 +74,13 @@ namespace HolidaySlug.Data.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("HolidayID")
+                    b.Property<Guid?>("HolidayID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("HolidayID1")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("UserID")
+                    b.Property<Guid?>("UserID")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("UserID1")
@@ -198,9 +200,7 @@ namespace HolidaySlug.Data.Migrations
                 {
                     b.HasOne("HolidaySlug.Data.Entities.Holiday", "Holiday")
                         .WithMany()
-                        .HasForeignKey("HolidayID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("HolidayID");
 
                     b.HasOne("HolidaySlug.Data.Entities.Holiday", null)
                         .WithMany()
@@ -208,9 +208,7 @@ namespace HolidaySlug.Data.Migrations
 
                     b.HasOne("HolidaySlug.Data.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserID");
 
                     b.HasOne("HolidaySlug.Data.Entities.User", null)
                         .WithMany()

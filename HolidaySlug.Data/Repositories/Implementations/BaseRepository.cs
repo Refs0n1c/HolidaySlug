@@ -7,8 +7,8 @@ namespace HolidaySlug.Data.Repositories.Implementations
 {
     public class BaseRepository<T> : IRepository<T> where T : class
     {
-        protected HolidaySlugContext _context = null;
-        protected DbSet<T> _table = null;
+        protected HolidaySlugContext _context;
+        protected DbSet<T> _table;
 
         public BaseRepository(HolidaySlugContext context)
         {
@@ -34,7 +34,7 @@ namespace HolidaySlug.Data.Repositories.Implementations
         {
             _table.Update(obj);
         }
-        
+
         public void Delete(T id)
         {
             _table.Remove(id);

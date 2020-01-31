@@ -4,14 +4,16 @@ using HolidaySlug.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HolidaySlug.Data.Migrations
 {
     [DbContext(typeof(HolidaySlugContext))]
-    partial class HolidaySlugContextModelSnapshot : ModelSnapshot
+    [Migration("20200131141425_holidayhistory_madefields_required")]
+    partial class holidayhistory_madefields_required
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

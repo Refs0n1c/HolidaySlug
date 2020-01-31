@@ -12,6 +12,7 @@
         <e p="docker-compose.yml" t="Include" />
         <e p="Entities" t="Include">
           <e p="Holiday.cs" t="Include" />
+          <e p="HolidayHistory.cs" t="Include" />
           <e p="HolidayType.cs" t="Include" />
           <e p="Teams.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -25,6 +26,10 @@
           <e p="20200131124416_ResolvedUserTeamRelationship.Designer.cs" t="Include" />
           <e p="20200131124824_addedRequiredUser_Holiday_addedIsManager_User.cs" t="Include" />
           <e p="20200131124824_addedRequiredUser_Holiday_addedIsManager_User.Designer.cs" t="Include" />
+          <e p="20200131140533_AddedHolidatHistoryTable.cs" t="Include" />
+          <e p="20200131140533_AddedHolidatHistoryTable.Designer.cs" t="Include" />
+          <e p="20200131141425_holidayhistory_madefields_required.cs" t="Include" />
+          <e p="20200131141425_holidayhistory_madefields_required.Designer.cs" t="Include" />
           <e p="HolidaySlugContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
