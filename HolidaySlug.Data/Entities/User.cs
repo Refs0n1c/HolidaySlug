@@ -10,6 +10,7 @@ namespace HolidaySlug.Data.Entities
         public string LastName { get; set; }
         public bool IsActive { get; set; }
         public int Entitlement { get; set; }
+        public bool IsManager { get; set; }
         public ICollection<Holiday> Holidays { get; set; }
         public UserTeam UserTeam { get; set; }
     }

@@ -46,7 +46,7 @@ namespace HolidaySlug.Data.Migrations
                     b.Property<DateTime>("To")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("UserID")
+                    b.Property<Guid>("UserID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
@@ -103,31 +103,39 @@ namespace HolidaySlug.Data.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsManager")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("UserTeamID")
+                    b.Property<Guid?>("UserTeamId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("UserTeamID");
+                    b.HasIndex("UserTeamId");
 
                     b.ToTable("Users");
                 });
 
             modelBuilder.Entity("HolidaySlug.Data.Entities.UserTeam", b =>
                 {
-                    b.Property<Guid>("ID")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("ManagerID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("ID");
+                    b.Property<Guid?>("UserID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("ManagerID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("UserTeams");
                 });
@@ -144,14 +152,16 @@ namespace HolidaySlug.Data.Migrations
 
                     b.HasOne("HolidaySlug.Data.Entities.User", "User")
                         .WithMany("Holidays")
-                        .HasForeignKey("UserID");
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("HolidaySlug.Data.Entities.User", b =>
                 {
                     b.HasOne("HolidaySlug.Data.Entities.UserTeam", "UserTeam")
-                        .WithMany("Users")
-                        .HasForeignKey("UserTeamID");
+                        .WithMany()
+                        .HasForeignKey("UserTeamId");
                 });
 
             modelBuilder.Entity("HolidaySlug.Data.Entities.UserTeam", b =>
@@ -159,6 +169,10 @@ namespace HolidaySlug.Data.Migrations
                     b.HasOne("HolidaySlug.Data.Entities.User", "Manager")
                         .WithMany()
                         .HasForeignKey("ManagerID");
+
+                    b.HasOne("HolidaySlug.Data.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID");
                 });
 #pragma warning restore 612, 618
         }

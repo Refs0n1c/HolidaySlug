@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="HolidaySlug.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Config" t="Include" />
+        <e p="Context" t="Include">
+          <e p="HolidaySlugContext.cs" t="Include" />
+        </e>
+        <e p="DbSettings" t="Include" />
+        <e p="docker-compose.yml" t="Include" />
+        <e p="Entities" t="Include">
+          <e p="Holiday.cs" t="Include" />
+          <e p="HolidayType.cs" t="Include" />
+          <e p="Teams.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="UserTeam.cs" t="Include" />
+        </e>
+        <e p="HolidaySlug.Data.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20200130150514_InitialCreate.cs" t="Include" />
+          <e p="20200130150514_InitialCreate.Designer.cs" t="Include" />
+          <e p="20200131124416_ResolvedUserTeamRelationship.cs" t="Include" />
+          <e p="20200131124416_ResolvedUserTeamRelationship.Designer.cs" t="Include" />
+          <e p="HolidaySlugContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="HolidaySlug.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="HolidaySlug.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_HolidaySlug.416527573.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>

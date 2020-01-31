@@ -15,6 +15,7 @@ namespace HolidaySlug.Data.Entities
         public int DaysUsed { get; set; }
       
        
+        [Required]
         public User User { get; set; }
         public bool Approved { get; set; }
         

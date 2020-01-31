@@ -17,12 +17,13 @@ namespace HolidaySlug.Data.Context
             modelBuilder.Entity<Holiday>().HasOne(h => h.ApprovedByUser);
 
             modelBuilder.Entity<User>().HasKey(u => u.ID);
-            modelBuilder.Entity<User>().HasOne(u => u.UserTeam).WithMany(u=>u.Users);
+            modelBuilder.Entity<User>().HasOne(u => u.UserTeam);
       
 
 
-            modelBuilder.Entity<UserTeam>().HasKey(ut => ut.ID);
+            modelBuilder.Entity<UserTeam>().HasKey(ut => ut.Id);
             modelBuilder.Entity<UserTeam>().HasOne(ut => ut.Manager);
+            modelBuilder.Entity<UserTeam>().HasOne(ut => ut.User);
 
             
 
@@ -30,7 +31,7 @@ namespace HolidaySlug.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=HolidaySlugDev;User=SA; Password=change_this_password");
+            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=HolidaySlugDev;User=SA; Password=Change*This^Password34");
         }
     }
 }

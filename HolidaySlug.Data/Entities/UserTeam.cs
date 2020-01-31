@@ -5,8 +5,8 @@ namespace HolidaySlug.Data.Entities
 {
     public class UserTeam
     {
-        public Guid ID { get; set; }
-        public List<User> Users { get; set; }
+        public Guid Id { get; set; }
+        public User User { get; set; }
         public User Manager { get; set; }
         
     }
