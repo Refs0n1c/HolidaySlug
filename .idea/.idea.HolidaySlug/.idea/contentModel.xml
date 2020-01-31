@@ -23,6 +23,8 @@
           <e p="20200130150514_InitialCreate.Designer.cs" t="Include" />
           <e p="20200131124416_ResolvedUserTeamRelationship.cs" t="Include" />
           <e p="20200131124416_ResolvedUserTeamRelationship.Designer.cs" t="Include" />
+          <e p="20200131124824_addedRequiredUser_Holiday_addedIsManager_User.cs" t="Include" />
+          <e p="20200131124824_addedRequiredUser_Holiday_addedIsManager_User.Designer.cs" t="Include" />
           <e p="HolidaySlugContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -30,6 +32,14 @@
             <e p="netcoreapp3.1" t="Include">
               <e p="HolidaySlug.Data.AssemblyInfo.cs" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="Implementations" t="Include">
+            <e p="BaseRepository.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IRepository.cs" t="Include" />
           </e>
         </e>
       </e>
