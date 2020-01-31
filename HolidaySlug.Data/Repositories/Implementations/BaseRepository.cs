@@ -17,32 +17,32 @@ namespace HolidaySlug.Data.Repositories.Implementations
         }
         public IEnumerable<T> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _table;
         }
 
         public T GetById(object id)
         {
-            throw new System.NotImplementedException();
+            return _table.Find(id);
         }
 
         public void Insert(T obj)
         {
-            throw new System.NotImplementedException();
+            _table.Add(obj);
         }
 
         public void Update(T obj)
         {
-            throw new System.NotImplementedException();
+            _table.Update(obj);
         }
-
-        public void Delete(object id)
+        
+        public void Delete(T id)
         {
-            throw new System.NotImplementedException();
+            _table.Remove(id);
         }
 
         public void Save()
         {
-            throw new System.NotImplementedException();
+            _context.SaveChanges();
         }
     }
 }

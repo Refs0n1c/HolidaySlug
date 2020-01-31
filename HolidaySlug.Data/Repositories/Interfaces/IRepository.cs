@@ -9,7 +9,7 @@ namespace HolidaySlug.Data.Repositories.Interfaces
             T GetById(object id);
             void Insert(T obj);
             void Update(T obj);
-            void Delete(object id);
+            void Delete(T obj);
             void Save();
 
     }
