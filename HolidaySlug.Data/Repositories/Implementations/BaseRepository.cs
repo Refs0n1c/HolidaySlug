@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using HolidaySlug.Data.Context;
 using HolidaySlug.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +20,16 @@ namespace HolidaySlug.Data.Repositories.Implementations
         public IEnumerable<T> GetAll()
         {
             return _table;
+        }
+
+        public IEnumerable<T> GetByWhere(Expression<Func<T, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<T> GetByPredicate()
+        {
+            throw new System.NotImplementedException();
         }
 
         public T GetById(object id)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HolidaySlug.Data.Context;
 using HolidaySlug.Data.Entities;
+using HolidaySlug.Data.Enums;
 using HolidaySlug.Data.Repositories.Interfaces;
 
 namespace HolidaySlug.Data.Repositories.Implementations
@@ -41,6 +42,20 @@ namespace HolidaySlug.Data.Repositories.Implementations
         public void DeleteHoliday(Holiday holiday)
         {
             _table.Remove(holiday);
+            Save();
+        }
+
+        public void LogHolidayActions(Holiday holiday, HolidayLoggingEnum logType)
+        {
+            var holidayHistoryRecord = new HolidayHistory
+            {
+                Id = Guid.NewGuid(),
+                Holiday = holiday,
+                User = holiday.User,
+                Action = logType.ToString()
+            };
+
+            _context.HolidayHistories.Add(holidayHistoryRecord);
             Save();
         }
     }
