@@ -213,6 +213,9 @@
       </e>
       <e p="HolidaySlug.Services" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BusinessLogic" t="Include">
+          <e p="HolidayBL.cs" t="Include" />
+        </e>
         <e p="DTO" t="Include">
           <e p="HolidayDTO.cs" t="Include" />
           <e p="HolidayHistoryDTO.cs" t="Include" />

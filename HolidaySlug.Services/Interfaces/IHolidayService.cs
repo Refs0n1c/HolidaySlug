@@ -8,8 +8,8 @@ namespace HolidaySlug.Services.Interfaces
     {
         IEnumerable<HolidayDTO> GetHolidaysByUser(Guid userId);
         HolidayDTO FindHoliday(Guid holidayId);
-        void CreateHoliday(HolidayDTO holiday);
-        void UpdateHoliday(HolidayDTO holiday);
-        void DeleteHoliday(Guid holiodayId);
+        bool CreateHoliday(HolidayDTO holiday);
+        bool UpdateHoliday(HolidayDTO holiday);
+        bool DeleteHoliday(HolidayDTO holiday);
     }
 }
