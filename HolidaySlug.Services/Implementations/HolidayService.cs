@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AutoMapper;
 using HolidaySlug.Services.DTO;
 using HolidaySlug.Services.Interfaces;
 
@@ -7,6 +8,12 @@ namespace HolidaySlug.Services.Implementations
 {
     public class HolidayService : IHolidayService
     {
+        private IMapper _mapper;
+
+        public HolidayService(IMapper mapper)
+        {
+            _mapper = mapper;
+        }
         public IEnumerable<HolidayDTO> GetHolidaysByUser(Guid userId)
         {
             throw new NotImplementedException();

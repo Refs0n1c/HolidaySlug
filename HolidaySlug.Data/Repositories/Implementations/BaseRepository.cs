@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using HolidaySlug.Data.Context;
 using HolidaySlug.Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Scaffolding.Internal;
 
 namespace HolidaySlug.Data.Repositories.Implementations
 {
@@ -14,7 +15,7 @@ namespace HolidaySlug.Data.Repositories.Implementations
 
         public BaseRepository(HolidaySlugContext context)
         {
-            this._context = context;
+            _context = context;
             _table = _context.Set<T>();
         }
         public IEnumerable<T> GetAll()
@@ -25,11 +26,6 @@ namespace HolidaySlug.Data.Repositories.Implementations
         public IEnumerable<T> GetByWhere(Expression<Func<T, bool>> predicate)
         {
             throw new NotImplementedException();
-        }
-
-        public IEnumerable<T> GetByPredicate()
-        {
-            throw new System.NotImplementedException();
         }
 
         public T GetById(object id)

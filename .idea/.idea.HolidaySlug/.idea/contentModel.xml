@@ -189,6 +189,8 @@
           <e p="20200131140533_AddedHolidatHistoryTable.Designer.cs" t="Include" />
           <e p="20200131141425_holidayhistory_madefields_required.cs" t="Include" />
           <e p="20200131141425_holidayhistory_madefields_required.Designer.cs" t="Include" />
+          <e p="20200203143902__addedProjectNamesToUser_added_weeklyHoursToUsers.cs" t="Include" />
+          <e p="20200203143902__addedProjectNamesToUser_added_weeklyHoursToUsers.Designer.cs" t="Include" />
           <e p="HolidaySlugContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

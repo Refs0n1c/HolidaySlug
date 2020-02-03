@@ -8,5 +8,6 @@ namespace HolidaySlug.Data.Entities
 
         public Guid ID { get; set; }
         public string TeamName { get; set; }
+        public string ProjectName { get; set; }
     }
 }
